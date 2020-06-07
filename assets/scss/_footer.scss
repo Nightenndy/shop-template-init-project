@@ -1,0 +1,11 @@
+.footer {
+  background-color: rgba($color-light, 0.8);
+
+  &__copyright {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.25rem;
+    text-align: center;
+    color: $color-dark;
+  }
+}

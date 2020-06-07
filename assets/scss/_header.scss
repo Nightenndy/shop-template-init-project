@@ -1,0 +1,128 @@
+.header {
+  &__navbar {
+    background-color: rgba($color-light, 0.8);
+
+    @media (min-width: 992px) {
+      .dropdown.show {
+        border-bottom: 1px solid $color-light;
+        background-color: $color-dark;
+
+        .dropdown-toggle {
+          color: $color-light;
+        }
+      }
+
+      .dropdown-menu {
+        margin-top: 1px;
+        background-color: $color-dark;
+        
+        border: none;
+        border-radius: 0;
+
+        a {
+          color: $color-light;
+
+          &:hover {
+            color: $color-dark;
+          }
+        }
+      }
+    }
+  }
+
+  &__carousel {
+    margin-right: 0;
+    margin-left: 0;
+    border-bottom: 1px solid $color-light;
+    background-color: rgba(#000000, 0.3);
+  }
+
+  &__navbar-search {
+    flex-wrap: nowrap;
+    border: 1px solid $color-dark;
+    height: 50px;
+
+    @media (max-width: 991px) {
+      display: inline-flex;
+      width: calc(100% - 100px);
+    }
+
+    .form-control {
+      font-size: 1.2rem;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+
+      @media (min-width: 992px) {
+        width: 10rem !important;
+      }
+      @media (max-width: 991px) {
+        flex-grow: 2;
+      }
+    }
+
+    button {
+      margin: 5px;
+      padding: 0;
+      background-color: $color-dark;
+      color: $color-light;
+      border-color: $color-dark;
+
+      &:hover {
+        color: $color-dark;
+        background-color: $color-light;
+      }
+    }
+
+    i {
+      display: block;
+      padding: 10px;
+    }
+  }
+}
+
+.header {
+  &__cart-btn {
+    position: relative;
+    margin-left: 30px;
+    width: 50px;
+    height: 50px;
+    color: $color-dark;
+    background-color: $color-light;
+    border: none;
+    border-radius: 0;
+    
+    @media (max-width: 991px) {
+      margin-top: -12px !important;
+    }
+
+    &:hover {
+      span {
+        color: $color-dark;
+        background-color: $color-light;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      width: 24px;
+      height: 24px;
+      color: $color-light;
+      background-color: $color-dark;
+      border-radius: 12px;
+      box-shadow: 0 0 5px rgba(#000000, 0.75);
+      transition: background-color 0.5s;
+    }
+  }
+
+  &__cart-counter {
+    display: none;
+  }
+}
+
+.fa-shopping-cart {
+  font-size: 1.5rem;
+}

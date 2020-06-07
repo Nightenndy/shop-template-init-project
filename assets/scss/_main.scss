@@ -1,0 +1,187 @@
+.breadcrumb {
+  padding: 1rem 0 0 0;
+  font-size: 14px;
+  background-color: transparent;
+  opacity: 0.5;
+  
+  a {
+    color: $color-light;
+  }
+
+  &-item {
+
+    + .breadcrumb-item::before {
+      content: ">";
+      color: $color-light;
+    }
+
+    &.active {
+      color: $color-light;
+    }
+  }
+}
+
+.title {
+  &__header {
+    font-size: 2.85rem;
+    color: $color-light;
+  }
+
+  &__filter {
+    margin-top: 6px;
+    padding: 3px 10px 5px;
+    width: 100%;
+    font-size: 1.25rem;
+    color: $color-light;
+    background-color: $color-dark;
+    border-color: $color-light;
+  }
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.item {
+  &-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+    border: 1px solid $color-light;
+    
+    .container-fluid {
+      background-color: rgba($color-dark, 0.5);
+    }
+  }
+
+  &-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 180px;
+    background-color: rgba($color-light, 0.75);
+  }
+
+  &-title {
+    padding-top: 0.75rem;
+    font-size: 1.75rem;
+    color: $color-light;
+  }
+
+  &-description {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: $color-light;
+  }
+
+  &-characteristics {
+    margin-top: 15px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
+    span {
+      display: block;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      color: $color-light;
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    button {
+      display: block;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+
+      &:last-child {
+        margin-top: 5px !important;
+      }
+    }
+  }
+
+  &-price {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $color-light;
+  }
+
+  &-actions {
+    padding: 15px;
+
+    button {
+      margin-bottom: 30px !important;
+      padding: 8px 5px 10px;
+      font-weight: bold;
+      color: $color-light;
+      text-transform: uppercase;
+      border-color: $color-light;
+      border-radius: 0;
+
+      @media (min-width: 1200px) {
+        font-size: 1.15rem;
+      }
+
+      @media (max-width: 1199px) {
+        font-size: 0.9rem;
+      }
+
+      &:last-child {
+        margin-bottom: 15px !important;
+      }
+
+      &:hover {
+        color: $color-dark;
+        border-color: $color-light;
+        background-color: rgba($color-light, 0.75);
+      }
+
+      i {
+        margin-left: 5px;
+        font-size: 1rem;
+      }
+    }
+
+    &__cart {
+      transition: background-color 0.5s;
+      background-color: rgba($color-light, 0.2);
+
+      &.disabled,
+      &:disabled,
+      &.active,
+      &:active {
+        color: $color-light !important;
+        border-color: $color-light !important;
+        background-color: rgba($color-light, 0.1) !important;
+        opacity: 1;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.btn-outline-success {
+  color: $color-dark;
+  border-color: $color-dark;
+  border-radius: 0;
+}
+
+.page-pagination {
+  &__more {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+
+    a {
+      color: $color-light;
+    }
+  }
+}
