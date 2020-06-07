@@ -27,7 +27,7 @@ let btnClickHandler = (e) => {
     setTimeout(() => {
       target.innerHTML = restoreHTML;
       buttonsContainer.addEventListener('click', btnClickHandler);
-    }, 2000);
+    }, 1200);
   }
 };
 
