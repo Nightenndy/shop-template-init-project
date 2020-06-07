@@ -3,12 +3,10 @@ let cartCounterLabel = document.querySelector('#cart-counter');
 let cartCounter = 0;
 let cartPrice = 0;
 
-buttonsContainer.addEventListener('click', btnClickHandler);
-
 let btnClickHandler = (e) => {
   let target = e.target;
 
-  if (target.classlist.contains('item-actions__cart')) {
+  if (target.classList.contains('item-actions__cart')) {
     cartCounterLabel.innerHTML = ++cartCounter;
 
     if (cartCounter === 1) cartCounterLabel.style.display = 'block';
@@ -32,3 +30,5 @@ let btnClickHandler = (e) => {
     }, 2000);
   }
 };
+
+buttonsContainer.addEventListener('click', btnClickHandler);
